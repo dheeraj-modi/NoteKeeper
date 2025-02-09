@@ -47,7 +47,6 @@ app.get("/edit/:filename",(req,res)=>{
 })
 
 app.post("/edit/:filename",(req,res)=>{
-    console.log("hello")
     const {content} = req.body;
     const filename = req.params.filename;
     const filePath = "./files/"+filename;
