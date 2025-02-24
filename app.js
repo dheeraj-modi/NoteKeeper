@@ -21,7 +21,7 @@ app.post("/create",(req,res)=>{
     const filePath = "./files/"+filename;
   fs.writeFile(filePath,content, (err)=>{
     if(err)
-        res.send("error in creating file");
+        res.send("error in creating file"+err);
     else
      res.redirect("/");
    });
@@ -52,7 +52,7 @@ app.post("/edit/:filename",(req,res)=>{
     const filePath = "./files/"+filename;
   fs.writeFile(filePath,content, (err)=>{
     if(err)
-        res.send("error in updating file");
+        res.send("error in updating file"+err);
     else
      res.redirect("/");
 });
